@@ -1,0 +1,124 @@
+html {
+    height: 100%; /* Asegura que el html ocupe toda la altura */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Henny Penny", system-ui;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100%; /* Asegura que el body ocupe toda la altura */
+}
+
+/* Para que el header esté centrado y responsive */
+.header {
+    text-align: center;
+    width: 100%;
+}
+
+.header h1 {
+    font-family: "Henny Penny", system-ui;
+    font-size: 9em; /* Tamaño lo suficientemente grande para llamar la atención */
+    font-weight: bolder;
+    color: #ff4d4d; /* Color del texto */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    
+    /* Efecto 3D con sombras múltiples */
+    text-shadow: 
+        4px 4px 0px rgba(0, 0, 0, 0.8),  /* Sombra negra cercana más opaca */
+        6px 6px 0px rgba(255, 205, 55, 4.0),  /* Sombra dorada más clara */
+        4px 4px 0px rgba(0, 0, 0, 0.7),  /* Sombra negra para mayor profundidad */
+        0 0 5px rgba(255, 205, 55, 0.8);
+
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre los recuadros */
+}
+
+@keyframes blink {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: yellow;
+    }
+}
+
+.price-box {
+    background-color: black;
+    padding: 40px;
+    border-radius: 100px;
+    height: 300px;
+    width: 600px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 
+                inset 0 0 10px rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 3px solid red; /* Define el color inicial del borde */
+    animation: blink 1s infinite;
+}
+
+.price-box h2 {
+    font-size: 6em;
+    color: #ffcc00;
+    margin: 0; /* Cambiado para eliminar el margen */
+    padding: 0; /* Asegura que no haya padding */
+}
+
+.price-box span {
+    font-size: 5em;
+    font-weight: bolder;
+    color: white;
+    padding: 5px;
+    border-radius: 100px;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Asegura que no haya margen que cause espacio */
+}
+
+.average-price {
+    font-size: 1em; /* Tamaño más pequeño para la media */
+    color: white;
+}
+
+.countdown {
+    padding: 70px;
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    margin-top: 20px; /* Espaciado superior */
+    font-size: 2.5em; /* Tamaño de fuente grande */
+    color: #ffcc00; /* Color del texto amarillo */
+    text-shadow: 0 0 5px rgba(255, 205, 55, 0.8); /* Sombra de texto para resaltar */
+}
+
+
+/* Tamaño de pantalla medio */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 3em; /* Ajusta el tamaño en tablets */
+    }
+}
+
+/* Tamaño de pantalla pequeño */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2.2em; /* Ajusta el tamaño en móviles */
+    }
+}

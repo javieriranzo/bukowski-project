@@ -1,0 +1,153 @@
+/* Asegura que el HTML y el BODY ocupen toda la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Henny Penny", system-ui;
+    background-color: #333; /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.header h1 {
+    font-family: "Henny Penny", system-ui;
+    font-size: 9em;
+    font-weight: bolder;
+    color: #ff4d4d;
+    margin: 0;
+    padding: 20px;
+    /* Efecto 3D con sombras múltiples */
+    text-shadow: 
+        4px 4px 0px rgba(0, 0, 0, 0.8),  /* Sombra negra cercana más opaca */
+        6px 6px 0px rgba(255, 205, 55, 4.0),  /* Sombra dorada más clara */
+        4px 4px 0px rgba(0, 0, 0, 0.7),  /* Sombra negra para mayor profundidad */
+        0 0 5px rgba(255, 205, 55, 0.8);
+
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+}
+
+/* Contenedor del login */
+.login-container {
+    display: flex;                     /* Usar flexbox */
+    justify-content: center;           /* Centrar horizontalmente */
+    align-items: center;               /* Centrar verticalmente */
+    height: 100%;                      /* Ocupar toda la altura */
+}
+
+/* Estilo para la caja de login */
+.login-box {
+    display: flex;
+    flex-direction: column;            /* Colocar elementos en columna */
+    justify-content: center;           /* Centrar contenido dentro de la caja */
+    align-items: center;               /* Centrar elementos dentro de la caja */
+    padding: 40px;
+    border-radius: 100px;
+    border: 5px solid #ffcc00;         /* Borde amarillo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 
+                inset 0 0 10px rgba(255, 255, 255, 0.3);
+    width: 100%;
+    max-width: 400px;                 /* Ancho máximo para la caja */
+    background-color: black;           /* Fondo de la caja de login */
+    text-align: center;                /* Centrar texto */
+}
+
+/* Título de la caja de login */
+.login-box h2 {
+    font-size: 3.5em;
+    font-weight: bolder;
+    color: #ffcc00;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para etiquetas */
+label {
+    font-size: 2em;
+    font-weight: bolder;
+    color: #fff;
+    display: block;
+}
+
+/* Estilo para los campos de texto */
+.input-group {
+    margin-bottom: 20px; /* Espacio entre cada grupo de entrada */
+    width: 100%;         /* Asegura que el input grupo tenga el mismo ancho que la caja */
+}
+
+/* Ajustes para inputs */
+input[type="email"], 
+input[type="password"] {
+    width: calc(100% + 1px);          /* Asegura que el input tenga un ancho fijo */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;                /* Espacio entre el input y el mensaje de error */
+    font-size: 1.2em;
+    font-family: "Henny Penny", system-ui; /* Cambia la font-family a la del botón */
+    border-radius: 50px;
+    background-color: #222;
+    color: #fff;
+    border: 2px solid #ccc;
+    text-align: center;
+    box-sizing: border-box;            /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Estilo de los inputs con error */
+input.is-invalid {
+    border-color: red; /* Cambiar color del borde si es inválido */
+}
+
+/* Grupo de botón */
+.button-group {
+    width: 100%;               /* Asegura que el botón ocupe todo el ancho */
+    display: flex;             /* Usar flexbox para centrar el botón */
+    justify-content: center;   /* Centrar horizontalmente el botón */
+}
+
+/* Estilo del botón */
+button {
+    margin-top: 20px;
+    font-family: "Henny Penny", system-ui; /* Mismo font-family que los inputs */
+    font-size: 1.5em;
+    font-weight: bolder;
+    padding: 15px;
+    color: white;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;               /* Ancho completo */
+}
+
+button:hover {
+    background-color: #e03c3c;
+}
+
+/* Responsividad para tablets */
+@media (max-width: 768px) {
+    .login-container {
+        max-width: 90%; /* Ancho máximo para la caja en tabletas */
+    }
+
+    .login-box h2 {
+        font-size: 2.5em; /* Ajustar tamaño del título */
+    }
+}
+
+/* Responsividad para móviles */
+@media (max-width: 480px) {
+    .login-box h2 {
+        font-size: 2em; /* Ajustar tamaño del título */
+    }
+
+    button {
+        font-size: 1.2em; /* Ajustar tamaño del botón */
+    }
+}

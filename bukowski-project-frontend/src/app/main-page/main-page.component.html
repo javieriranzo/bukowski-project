@@ -1,1 +1,62 @@
-<p>main-page works!</p>
+<div class="container">
+    <header class="header">
+        <h1>Bukowski's Crazy Prices</h1>
+    </header>
+
+    <main>
+        <div class="pricing">
+            <div class="price-box">
+                <h2>Pinta</h2>
+                <span>{{ randomNumber1.toFixed(2) }}€</span>
+                <!-- <span class="average-price">Media: {{ calculateAverage(randomNumbers1History).toFixed(2) }}€</span> -->
+            </div>
+            <div class="price-box">
+                <h2>1/2 Pinta</h2>
+                <span>{{ randomNumber2.toFixed(2) }}€</span>
+                <!-- <span class="average-price">Media: {{ calculateAverage(randomNumbers2History).toFixed(2) }}€</span> -->
+            </div>
+        </div>
+        
+        <div class="countdown">
+            <span>{{ getFormattedCountdown() }}</span>
+        </div>
+
+        <!-- Tabla editable con los datos de cervezas -->
+        <!--
+        <div class="beer-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grifo</th>
+                        <th>Nombre</th>
+                        <th>Estilo</th>
+                        <th>Brewery</th>
+                        <th><i class="fas fa-map-marker-alt"></i></th>
+                        <th>ABV</th>
+                        <th>Acciones</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let beer of beers">
+                        <td><input type="number" [(ngModel)]="beer.tap"></td>
+                        <td><input type="text" [(ngModel)]="beer.name"></td>
+                        <td><input type="text" [(ngModel)]="beer.style"></td>
+                        <td><input type="text" [(ngModel)]="beer.brewery"></td>
+                        <td><input type="text" [(ngModel)]="beer.origin"></td>
+                        <td><input type="text" [(ngModel)]="beer.abv"></td>
+                        <td>
+                            <button (click)="deleteBeer(beer.tap)">
+                                <i class="fas fa-trash-alt"></i> 
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="button-container">
+            <button (click)="addBeer()">Añadir Cerveza</button>
+        </div>
+    -->
+    </main>
+</div>
