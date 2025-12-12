@@ -1,16 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { ControlPanelPageComponent } from './control-panel-page/control-panel-page.component';
-import { MainPageComponent } from './main-page/main-page.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, LoginPageComponent, ControlPanelPageComponent, MainPageComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [RouterOutlet],
+  templateUrl: './app.html',
+  styleUrl: './app.scss'
 })
 export class AppComponent {
-  title = 'bukowski-project-frontend';
+  protected readonly title = signal('bukowski-project-frontend');
+
+  constructor(private router: Router) {}
+
+  // Navegación rápida a las rutas
+  navigate(path: string) {
+    this.router.navigate([path]);
+  }
+  
 }

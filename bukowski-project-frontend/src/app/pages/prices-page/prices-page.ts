@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-main-page',
-  standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
-  templateUrl: './main-page.component.html',
-  styleUrl: './main-page.component.css'
+  selector: 'app-prices-page',
+  imports: [],
+  templateUrl: './prices-page.html',
+  styleUrl: './prices-page.scss',
 })
-export class MainPageComponent {
+export class PricesPage {
 
   public randomNumber1: number = 0;
   public randomNumber2: number = 0;

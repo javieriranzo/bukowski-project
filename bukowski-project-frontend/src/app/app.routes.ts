@@ -1,13 +1,15 @@
 import { Routes } from '@angular/router';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { ControlPanelPageComponent } from './control-panel-page/control-panel-page.component';
+import { LoginPage } from './pages/login-page/login-page';
+import { ControlPanelPage } from './pages/control-panel-page/control-panel-page';
+import { BlackboardPage } from './pages/blackboard-page/blackboard-page';
+import { EventsPage } from './pages/events-page/events-page';
+import { PricesPage } from './pages/prices-page/prices-page';
 
 export const routes: Routes = [
-    { path: 'login', component: LoginPageComponent },
-    { path: 'main', component: MainPageComponent },
-    { path: 'control-panel', component: ControlPanelPageComponent},
-    { path: '', redirectTo: '/main', pathMatch: 'full' }, // Redirige a 'main' por defecto
-    { path: '**', redirectTo: '/main' } // Redirige a 'main' si la ruta no existe
+    { path: '', redirectTo: 'login', pathMatch: 'full' }, 
+    { path: 'login', component: LoginPage },
+    { path: 'control-panel', component: ControlPanelPage }, 
+    { path: 'blackboard', component: BlackboardPage }, 
+    { path: 'events', component: EventsPage }, 
+    { path: 'prices', component: PricesPage }
 ];
-

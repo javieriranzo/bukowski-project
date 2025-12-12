@@ -4,12 +4,11 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login-page',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.css'
+  imports: [FormsModule, CommonModule],
+  templateUrl: './login-page.html',
+  styleUrl: './login-page.scss',
 })
-export class LoginPageComponent {
+export class LoginPage {
 
   public email: string = '';
   public password: string = '';
