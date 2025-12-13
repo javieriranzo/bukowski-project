@@ -1,0 +1,37 @@
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  min-width: 260px;
+  max-width: 360px;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.25s ease-out;
+  z-index: 1000;
+}
+
+.success {
+  background-color: #2e7d32;
+}
+
+.error {
+  background-color: #c62828;
+}
+
+.info {
+  background-color: #1565c0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

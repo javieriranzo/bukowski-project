@@ -1,0 +1,10 @@
+<div
+  class="toast"
+  *ngIf="toastService.toast() as toast"
+  [class.success]="toast.type === 'success'"
+  [class.error]="toast.type === 'error'"
+  [class.info]="toast.type === 'info'"
+>
+  {{ toast.message }}
+</div>
+
