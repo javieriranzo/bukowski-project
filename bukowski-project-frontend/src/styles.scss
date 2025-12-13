@@ -1,0 +1,94 @@
+body {
+    font-family: "Henny Penny", system-ui;
+    background-color: #333 !important; /* Color de fondo */
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.header h1 {
+    font-family: "Henny Penny", system-ui;
+    font-size: 9em;
+    font-weight: bolder;
+    color: #ff4d4d;
+    margin: 0;
+    padding: 20px;
+    /* Efecto 3D con sombras múltiples */
+    text-shadow: 
+        4px 4px 0px rgba(0, 0, 0, 0.8),  /* Sombra negra cercana más opaca */
+        6px 6px 0px rgba(255, 205, 55, 4.0),  /* Sombra dorada más clara */
+        4px 4px 0px rgba(0, 0, 0, 0.7),  /* Sombra negra para mayor profundidad */
+        0 0 5px rgba(255, 205, 55, 0.8);
+
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+}
+
+input, textarea, select {
+    width: calc(100% + 1px);          /* Asegura que el input tenga un ancho fijo */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;                /* Espacio entre el input y el mensaje de error */
+    font-size: 1.2em;
+    font-family: "Henny Penny", system-ui; /* Cambia la font-family a la del botón */
+    border-radius: 50px;
+    background-color: #222;
+    color: #fff;
+    border: 2px solid #ccc;
+    text-align: center;
+    box-sizing: border-box;            /* Asegura que el padding no afecte el ancho total */
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(255,205,55,0.7);
+}
+
+button {
+    font-family: "Henny Penny", system-ui;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px solid #ff4d4d; 
+    background-color: #ff4d4d;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5), inset 0 0 5px rgba(255,255,255,0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover / Focus */
+button:hover, button:focus {
+    outline: none;
+    color: black;
+    background-color: #ffcc00; /* resalta ligeramente */
+    border-color: #ffcc00; /* borde amarillo neón */
+    box-shadow: 0 0 15px rgba(255,205,55,0.8), inset 0 0 5px rgba(255,255,255,0.3);
+    transform: scale(1.05); /* ligero efecto de zoom */
+}
+
+/* Botones deshabilitados */
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+    background-color: rgba(0,0,0,0.5);
+    border-color: #777;
+}
+
+/* Botones pequeños opcionales */
+button.small {
+    font-size: 1em;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

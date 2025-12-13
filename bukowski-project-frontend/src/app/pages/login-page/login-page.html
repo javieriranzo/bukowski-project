@@ -1,12 +1,11 @@
 <div class="container">
     <header class="header">
-        <h1>Bukowski's Control Panel</h1>
+        <h1>Bukowski Craft Beer Bar</h1>
     </header>
     <main>
         <div class="login-container">
             <div class="login-box">
                 <h2>Login</h2>
-
                 <form (ngSubmit)="onSubmit()" #loginForm="ngForm" aria-labelledby="login-title">
                     <!-- Email Input -->
                     <div class="input-group">
@@ -37,7 +36,6 @@
                             aria-describedby="passwordError"
                         />
                     </div>
-
                     <!-- Submit Button -->
                     <button type="submit" [disabled]="loginForm.invalid">Iniciar sesión</button>
                 </form>

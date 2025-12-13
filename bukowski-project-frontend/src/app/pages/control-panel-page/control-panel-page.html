@@ -1,1 +1,58 @@
-<p>control-panel-page works!</p>
+<div class="container">
+  <header class="header">
+    <h1>Panel de control</h1>
+  </header>
+  <main>
+    <div class="control-panel-container">
+        <div class="prices-box">
+          <h2> Crazy prices </h2>
+          <form [formGroup]="priceForm" (ngSubmit)="savePrices()">
+            <div class="form-grid">
+              <h3>Pinta</h3>
+              <legend>Pinta</legend>
+              <label>Precio mínimo
+                <span class="input-euro">
+                  <input type="number" formControlName="minPinta">
+                </span>
+              </label>
+              <label>Precio máximo
+                <span class="input-euro">
+                  <input type="number" formControlName="maxPinta">
+                </span>
+              </label>
+              <h3>1/2 pinta</h3>
+              <legend>Media Pinta</legend>
+              <label>Precio mínimo
+                <span class="input-euro">
+                  <input type="number" formControlName="minHalf">
+                </span>
+              </label>
+              <label>Precio máximo
+                <span class="input-euro">
+                  <input type="number" formControlName="maxHalf">
+                </span>
+              </label>
+            </div>
+            <div class="actions">
+              <button type="submit">Guardar precios</button>
+            </div>
+          </form>
+        </div>
+        <div class="menu-box">
+          <h2>Carta de comidas</h2>
+          <form [formGroup]="menuForm" (ngSubmit)="saveMenu()">
+            <div class="form-grid">
+              <label *ngFor="let item of menuItems.controls; let i = index">
+                Plato {{ i + 1 }}
+                <input type="text" [formControlName]="i" placeholder="Nombre del plato">
+              </label>
+            </div>
+            <div class="actions">
+              <button type="submit">Guardar carta</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </main>
+  <app-toast-info></app-toast-info>
+</div>
