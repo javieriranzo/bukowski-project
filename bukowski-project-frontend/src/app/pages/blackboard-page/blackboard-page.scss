@@ -1,0 +1,183 @@
+/* =========================================================
+   ANIMACIÓN NEÓN MARCO EXTERIOR
+========================================================= */
+@keyframes neon-blink {
+    0%, 100% {
+        border-color: rgba(255, 205, 55, 0.5);
+        box-shadow:
+            0 0 25px rgba(255, 205, 55, 0.6),
+            inset 0 0 15px rgba(255,255,255,0.08);
+    }
+    50% {
+        border-color: #ffcc00;
+        box-shadow:
+            0 0 40px rgba(255, 205, 55, 1),
+            0 0 70px rgba(255, 205, 55, 0.8),
+            inset 0 0 20px rgba(255,255,255,0.15);
+    }
+}
+
+/* =========================================================
+   LAYOUT GENERAL (DOS PIZARRAS)
+========================================================= */
+.blackboard-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 95vw;
+    max-width: 1900px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+/* =========================================================
+   MARCO EXTERIOR PIZARRA
+========================================================= */
+.blackboard-wrapper {
+    background-color: black;
+    border-radius: 40px;
+    border: 5px solid #ffcc00;
+    animation: neon-blink 1.2s infinite;
+    box-shadow:
+        inset 0 0 25px rgba(255,255,255,0.08),
+        0 0 40px rgba(0,0,0,0.9);
+    padding: 20px;
+    width: 100%;
+}
+
+/* =========================================================
+   TABLA PRINCIPAL
+========================================================= */
+.blackboard-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    background: #0b0b0b;
+    border-radius: 25px;
+    font-family: "Barriecito", system-ui;
+    color: #fff;
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,0.05);
+}
+
+/* =========================================================
+   CABECERA
+========================================================= */
+.blackboard-table thead th {
+    font-size: 1.5em;
+    color: #ffcc00;
+    padding: 16px;
+    text-align: center;
+    border-bottom: 3px solid #1B7EAB;
+    border-right: 2px solid #1B7EAB;
+
+    text-shadow:
+        0 0 8px rgba(255,205,55,0.8),
+        1px 1px 0 rgba(0,0,0,0.9);
+}
+
+.blackboard-table thead th:last-child {
+    border-right: none;
+}
+
+/* =========================================================
+   FILAS
+========================================================= */
+.blackboard-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.blackboard-table tbody tr:hover {
+    background: rgba(255,255,255,0.07);
+}
+
+/* =========================================================
+   CELDAS (BORDES INTERIORES)
+========================================================= */
+.blackboard-table td {
+    padding: 16px;
+    font-size: 1.5em;
+    text-align: center;
+    border-bottom: 2px solid #1B7EAB;
+    border-right: 2px solid #1B7EAB;
+
+    word-wrap: break-word;
+    white-space: normal;
+
+    text-shadow:
+        0 0 5px rgba(255,205,55,0.4),
+        1px 1px 0 rgba(0,0,0,0.8);
+}
+
+.blackboard-table td:last-child {
+    border-right: none;
+}
+
+.blackboard-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================================================
+   COLUMNA GRIFO
+========================================================= */
+.blackboard-table .tap {
+    font-size: 1.5em;
+    color: #ff4d4d;
+    text-shadow:
+        0 0 10px rgba(255,77,77,0.9),
+        1px 1px 0 rgba(0,0,0,0.9);
+}
+
+/* =========================================================
+   NOMBRE CERVEZA
+========================================================= */
+.blackboard-table .name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* =========================================================
+   PRECIOS
+========================================================= */
+.blackboard-table .price {
+    font-size: 1.5em;
+    color: #ffcc00;
+    text-shadow:
+        0 0 10px rgba(255,205,55,0.9),
+        1px 1px 0 rgba(0,0,0,0.9);
+}
+
+/* =========================================================
+   ICONO UBICACIÓN
+========================================================= */
+.icon {
+    margin-right: 6px;
+    color: #ffcc00;
+    text-shadow: 0 0 6px rgba(255,205,55,0.8);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1200px) {
+    .blackboard-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blackboard-table {
+        font-size: 0.85em;
+    }
+
+    .blackboard-table th,
+    .blackboard-table td {
+        padding: 12px;
+    }
+
+    .blackboard-wrapper {
+        border-radius: 30px;
+    }
+}

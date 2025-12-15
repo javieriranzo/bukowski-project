@@ -1,5 +1,38 @@
+<header class="header">
+  <h1>La pizarra de Bukowski</h1>
+</header>
+
 <div class="container">
-    <header class="header">
-        <h1>Nuestra pizarra</h1>
-    </header>
+  <main class="blackboard-wrapper split">
+
+    <!-- TABLA IZQUIERDA -->
+    <div class="blackboard-panel">
+      <table class="blackboard-table">
+        <thead>
+          <tr>
+            <th>Grifo</th>
+            <th>Nombre</th>
+            <th>Estilo</th>
+            <th>Brewery</th>
+            <th><span class="icon">📍</span></th>
+            <th>ABV %</th>
+            <th>½ Pinta</th>
+            <th>Pinta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let beer of beers">
+            <td class="tap">{{ beer.tap }}</td>
+            <td class="name">{{ beer.name }}</td>
+            <td>{{ beer.style }}</td>
+            <td>{{ beer.brewery }}</td>
+            <td>{{ beer.location }}</td>
+            <td>{{ beer.abv }}%</td>
+            <td class="price">{{ beer.halfPrice | currency:'EUR' }}</td>
+            <td class="price">{{ beer.pintPrice | currency:'EUR' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
 </div>

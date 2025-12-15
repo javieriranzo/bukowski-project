@@ -2,13 +2,13 @@ import { Component, signal, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormArray, Validators, ReactiveFormsModule } from '@angular/forms';
 import { priceRangeValidator } from '../../validators/price-range.validator';
+import { NavbarMenuPage } from '../navbar-menu-page/navbar-menu-page';
 import { ToastService } from '../../shared/toast-info/toast-info.service';
-import { ToastInfo } from '../../shared/toast-info/toast-info';
 
 @Component({
   selector: 'app-control-panel-page',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, ToastInfo],
+  imports: [CommonModule, ReactiveFormsModule, NavbarMenuPage],
   templateUrl: './control-panel-page.html',
   styleUrls: ['./control-panel-page.scss']
 })
