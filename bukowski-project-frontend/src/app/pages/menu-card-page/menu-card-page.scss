@@ -1,0 +1,126 @@
+/* ===============================
+   CONTENEDOR GENERAL
+================================ */
+@keyframes blink {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: yellow;
+    }
+}
+
+.menu-wrapper {
+  width: 95vw;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #0b0b0b;
+  border-radius: 40px;
+  border: 5px solid #ffcc00;
+  box-shadow:
+    inset 0 0 25px rgba(255,255,255,0.08),
+    0 0 35px rgba(0,0,0,0.9);
+  animation: blink 1s infinite;
+}
+
+/* ===============================
+   LISTA PRINCIPAL
+================================ */
+.menu-board {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Barriecito", system-ui;
+  color: #fff;
+}
+
+/* ===============================
+   FILA DE PLATO
+================================ */
+.menu-row {
+  margin-bottom: 28px;
+}
+
+/* ===============================
+   LÍNEA PRINCIPAL (NOMBRE + PRECIO)
+================================ */
+.menu-line {
+  display: flex;
+  align-items: baseline;
+  font-size: 2.5em;
+  line-height: 1.1;
+}
+
+/* Nombre */
+.menu-name {
+  white-space: nowrap;
+  text-shadow:
+    0 0 6px rgba(255,205,55,0.6),
+    1px 1px 0 rgba(0,0,0,0.9);
+}
+
+/* Puntos tipo carta clásica */
+.menu-dots {
+  flex: 1;
+  margin: 0 12px;
+  border-bottom: 2px dotted rgba(255,255,255,0.4);
+  transform: translateY(-4px);
+}
+
+/* Precio */
+.menu-price {
+  color: #ffcc00;
+  font-size: 1.1em;
+  text-shadow:
+    0 0 8px rgba(255,205,55,0.9),
+    1px 1px 0 rgba(0,0,0,0.9);
+}
+
+/* ===============================
+   DESCRIPCIÓN
+================================ */
+.menu-description {
+  font-size: 1.4em;
+  margin-left: 40px;
+  margin-top: 6px;
+  color: rgba(255,255,255,0.85);
+  text-shadow:
+    0 0 4px rgba(255,255,255,0.2);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .menu-line {
+    font-size: 1.8em;
+  }
+
+  .menu-description {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-wrapper {
+    padding: 25px;
+  }
+
+  .menu-line {
+    font-size: 1.5em;
+    flex-wrap: wrap;
+  }
+
+  .menu-dots {
+    display: none;
+  }
+
+  .menu-price {
+    margin-left: auto;
+  }
+
+  .menu-description {
+    margin-left: 20px;
+  }
+}

@@ -1,19 +1,29 @@
-body {
-    font-family: "Henny Penny", system-ui;
-    background-color: #333 !important; /* Color de fondo */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Barriecito", system-ui;
+    background-color: #333; 
+}
+
+.container {
+    width: 95vw;          /* 👈 ocupa casi toda la pantalla */
+    max-width: 1800px;    /* 👈 límite para pantallas enormes */
+    margin: 0 auto;
 }
 
 .header {
     text-align: center;
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 40px;
 }
 
 .header h1 {
-    font-family: "Henny Penny", system-ui;
-    font-size: 9em;
+    font-family: "Barriecito", system-ui;
+    font-size: 10em;
     font-weight: bolder;
-    color: #ff4d4d;
+    color: #A30000;
     margin: 0;
     padding: 20px;
     /* Efecto 3D con sombras múltiples */
@@ -32,7 +42,7 @@ input, textarea, select {
     padding-bottom: 15px;
     margin-bottom: 5px;                /* Espacio entre el input y el mensaje de error */
     font-size: 1.2em;
-    font-family: "Henny Penny", system-ui; /* Cambia la font-family a la del botón */
+    font-family: "Barriecito", system-ui; /* Cambia la font-family a la del botón */
     border-radius: 50px;
     background-color: #222;
     color: #fff;
@@ -48,36 +58,77 @@ input:focus, textarea:focus, select:focus {
 }
 
 button {
-    font-family: "Henny Penny", system-ui;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border-radius: 15px;
-    border: 2px solid #ff4d4d; 
-    background-color: #ff4d4d;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5), inset 0 0 5px rgba(255,255,255,0.2);
-    transition: all 0.2s ease-in-out;
+  font-family: "Barriecito", system-ui;
+  font-size: 1.6em;
+  padding: 16px 24px;
+  border-radius: 999px;
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  background: linear-gradient(
+    180deg,
+    #ff5f5f 0%,
+    #ff2f2f 100%
+  );
+  color: #fff;
+  cursor: pointer;
+
+  /* Profundidad */
+  box-shadow:
+    0 6px 0 rgba(0, 0, 0, 0.7),
+    0 10px 20px rgba(0, 0, 0, 0.6);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
-/* Hover / Focus */
-button:hover, button:focus {
-    outline: none;
-    color: black;
-    background-color: #ffcc00; /* resalta ligeramente */
-    border-color: #ffcc00; /* borde amarillo neón */
-    box-shadow: 0 0 15px rgba(255,205,55,0.8), inset 0 0 5px rgba(255,255,255,0.3);
-    transform: scale(1.05); /* ligero efecto de zoom */
+/* Hover */
+button:hover {
+  background: linear-gradient(
+    180deg,
+    #ffdd55 0%,
+    #ffb700 100%
+  );
+  color: #000;
+
+  box-shadow:
+    0 6px 0 rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(255, 205, 55, 0.9);
 }
 
-/* Botones deshabilitados */
+/* Active (click realista) */
+button:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 rgba(0, 0, 0, 0.6),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Focus accesible (teclado) */
+button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 6px 0 rgba(0, 0, 0, 0.6),
+    0 0 0 4px rgba(255, 205, 55, 0.6),
+    0 0 20px rgba(255, 205, 55, 1);
+}
+
+/* Disabled */
 button:disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
-    box-shadow: none;
-    background-color: rgba(0,0,0,0.5);
-    border-color: #777;
+  cursor: not-allowed;
+  opacity: 0.5;
+  background: linear-gradient(
+    180deg,
+    #555 0%,
+    #333 100%
+  );
+  color: #ccc;
+  border-color: #222;
+  box-shadow:
+    0 4px 0 rgba(0, 0, 0, 0.5);
 }
+
 
 /* Botones pequeños opcionales */
 button.small {

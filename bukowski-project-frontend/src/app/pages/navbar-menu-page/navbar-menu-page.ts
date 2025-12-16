@@ -1,10 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-menu-page',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './navbar-menu-page.html',
   styleUrl: './navbar-menu-page.scss',
 })

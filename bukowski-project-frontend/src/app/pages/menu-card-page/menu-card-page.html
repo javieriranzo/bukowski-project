@@ -1,5 +1,20 @@
+<header class="header">
+  <h1>¿Algo para picar?</h1>
+</header>
+
 <div class="container">
-    <header class="header">
-        <h1>Nuestra carta de comida</h1>
-    </header>
+    <main class="menu-wrapper">
+        <ul class="menu-board">
+            <li class="menu-row" *ngFor="let item of menuCard">
+                <div class="menu-line">
+                    <span class="menu-name">🍽 {{ item.tapa }}</span>
+                    <span class="menu-dots"></span>
+                    <span class="menu-price">{{ item.price | currency:'EUR' }}</span>
+                </div>
+                <div class="menu-description">
+                    {{ item.description }}
+                </div>
+            </li>
+        </ul>
+    </main>
 </div>

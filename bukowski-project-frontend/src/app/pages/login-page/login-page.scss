@@ -32,55 +32,11 @@
     margin-bottom: 10px;
 }
 
-/* Estilo para etiquetas */
-label {
-    font-size: 2em;
-    font-weight: bolder;
-    color: #fff;
-    display: block;
-}
-
-/* Estilo para los campos de texto */
-.input-group {
-    margin-bottom: 20px; /* Espacio entre cada grupo de entrada */
-    width: 100%;         /* Asegura que el input grupo tenga el mismo ancho que la caja */
-}
-
-/* Ajustes para inputs */
-input[type="email"], 
-input[type="password"] {
-    width: calc(100% + 1px);          /* Asegura que el input tenga un ancho fijo */
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-bottom: 5px;                /* Espacio entre el input y el mensaje de error */
-    font-size: 1.2em;
-    font-family: "Henny Penny", system-ui; /* Cambia la font-family a la del botón */
-    border-radius: 50px;
-    background-color: #222;
-    color: #fff;
-    border: 2px solid #ccc;
-    text-align: center;
-    box-sizing: border-box;            /* Asegura que el padding no afecte el ancho total */
-}
-
-/* Estilo de los inputs con error */
-input.is-invalid {
-    border-color: red; /* Cambiar color del borde si es inválido */
-}
-
-/* Grupo de botón */
-.button-group {
-    width: 100%;               /* Asegura que el botón ocupe todo el ancho */
-    display: flex;             /* Usar flexbox para centrar el botón */
-    justify-content: center;   /* Centrar horizontalmente el botón */
-}
-
 /* Responsividad para tablets */
 @media (max-width: 768px) {
     .login-container {
         max-width: 90%; /* Ancho máximo para la caja en tabletas */
     }
-
     .login-box h2 {
         font-size: 2.5em; /* Ajustar tamaño del título */
     }
@@ -91,7 +47,6 @@ input.is-invalid {
     .login-box h2 {
         font-size: 2em; /* Ajustar tamaño del título */
     }
-
     button {
         font-size: 1.2em; /* Ajustar tamaño del botón */
     }

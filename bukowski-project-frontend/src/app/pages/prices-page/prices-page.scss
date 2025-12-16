@@ -1,21 +1,5 @@
-html {
-    height: 100%; /* Asegura que el html ocupe toda la altura */
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Henny Penny", system-ui;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    height: 100%; /* Asegura que el body ocupe toda la altura */
-}
-
 .pricing {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: flex-start;
     gap: 20px; /* Espacio entre los recuadros */
@@ -44,7 +28,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 3px solid red; /* Define el color inicial del borde */
+    border: 5px solid red; /* Define el color inicial del borde */
     animation: blink 1s infinite;
 }
 
@@ -78,7 +62,7 @@ body {
     justify-content: center; /* Centrar contenido horizontalmente */
     align-items: center; /* Centrar contenido verticalmente */
     margin-top: 20px; /* Espaciado superior */
-    font-size: 2.5em; /* Tamaño de fuente grande */
+    font-size: 5em; /* Tamaño de fuente grande */
     color: #ffcc00; /* Color del texto amarillo */
     text-shadow: 0 0 5px rgba(255, 205, 55, 0.8); /* Sombra de texto para resaltar */
 }

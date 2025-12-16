@@ -1,14 +1,3 @@
-<header>
-  <h1>{{ title() }}</h1>
-  <nav>
-    <button (click)="navigate('login')">Login</button>
-    <button (click)="navigate('control-panel')">Control Panel</button>
-    <button (click)="navigate('blackboard')">Blackboard</button>
-    <button (click)="navigate('events')">Events</button>
-    <button (click)="navigate('prices')">Prices</button>
-  </nav>
-</header>
-
 <main>
   <router-outlet></router-outlet>
   <app-toast-info></app-toast-info>

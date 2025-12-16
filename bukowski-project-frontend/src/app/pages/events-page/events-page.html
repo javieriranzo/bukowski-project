@@ -1,5 +1,25 @@
+<header class="header">
+    <h1>Próximamente en Bukowski</h1>
+</header>
+
 <div class="container">
-    <header class="header">
-        <h1>Próximamente en Bukowski ...</h1>
-    </header>
+    <main class="events-wrapper">
+        <div class="event-slider">
+            <!-- Flecha izquierda -->
+            <button class="nav left" (click)="prev()">‹</button>
+            <!-- Evento -->
+            <div class="event-board">
+                <h2 class="event-title">{{ currentEvent.title }}</h2>
+                <div class="event-meta">
+                    <span>📅 {{ currentEvent.eventDate | date:'dd/MM/yyyy' }}</span>
+                    <span>⏰ {{ currentEvent.eventHour }}</span>
+                </div>
+                <p class="event-description"> {{ currentEvent.description }} </p>
+
+            </div>
+            <!-- Flecha derecha -->
+            <button class="nav right" (click)="next()">›</button>
+        </div>
+    </main>
 </div>
+

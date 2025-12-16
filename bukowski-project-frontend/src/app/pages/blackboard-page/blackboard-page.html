@@ -16,8 +16,8 @@
             <th>Brewery</th>
             <th><span class="icon">📍</span></th>
             <th>ABV %</th>
-            <th>½ Pinta</th>
             <th>Pinta</th>
+            <th>½ Pinta</th>
           </tr>
         </thead>
         <tbody>
@@ -28,11 +28,14 @@
             <td>{{ beer.brewery }}</td>
             <td>{{ beer.location }}</td>
             <td>{{ beer.abv }}%</td>
-            <td class="price">{{ beer.halfPrice | currency:'EUR' }}</td>
             <td class="price">{{ beer.pintPrice | currency:'EUR' }}</td>
+            <td class="price">{{ beer.halfPrice | currency:'EUR' }}</td>
           </tr>
         </tbody>
       </table>
     </div>
   </main>
+</div>
+<div class="fridge-message">
+  <span>Y todas las latas de la nevera ...</span>
 </div>
